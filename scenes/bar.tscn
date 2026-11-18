@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://dva06xo6srdqd"]
+
+[ext_resource type="PackedScene" uid="uid://dxao87cwam4fj" path="res://scenes/npc.tscn" id="1_5dekh"]
+
+[sub_resource type="Gradient" id="Gradient_bwlfd"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.2909617, 0.08877704, 0.1388652, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_5ious"]
+gradient = SubResource("Gradient_bwlfd")
+
+[sub_resource type="Gradient" id="Gradient_x848m"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.5334419, 0.2969622, 0.29265246, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_cc4rh"]
+gradient = SubResource("Gradient_x848m")
+
+[node name="bar" type="Control" unique_id=1464480757]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="Control" parent="." unique_id=1495741552]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="drinks_shelves" type="Sprite2D" parent="background" unique_id=488381321]
+position = Vector2(575.75, 323.75)
+scale = Vector2(1152.5, 648.5)
+texture = SubResource("GradientTexture1D_5ious")
+region_enabled = true
+region_rect = Rect2(0, 0, 1, 1)
+
+[node name="forground" type="Control" parent="." unique_id=958049716]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -229.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="bar_table" type="Sprite2D" parent="forground" unique_id=709490192]
+position = Vector2(576, 114.5)
+texture = SubResource("GradientTexture1D_cc4rh")
+region_enabled = true
+region_rect = Rect2(0, 0, 1152, 229)
+
+[node name="NPC_control" type="Control" parent="forground" unique_id=1101037892]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="NPC" parent="forground/NPC_control" unique_id=1967629777 instance=ExtResource("1_5dekh")]
+position = Vector2(-531, -172)
+
+[node name="midground" type="Control" parent="." unique_id=445043826]
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="bartender" type="Sprite2D" parent="midground" unique_id=1672142623]

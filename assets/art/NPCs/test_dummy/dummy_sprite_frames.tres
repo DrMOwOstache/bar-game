@@ -1,0 +1,41 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://41bc8ubykvf0"]
+
+[ext_resource type="Texture2D" uid="uid://dtl7ttqerecs6" path="res://assets/art/NPCs/test_dummy/dummy_back.png" id="1_mp5sa"]
+[ext_resource type="Texture2D" uid="uid://vu3robv2qj75" path="res://assets/art/NPCs/test_dummy/dummy_back_drinking.png" id="2_khfci"]
+[ext_resource type="Texture2D" uid="uid://c4joxs4u1bmpi" path="res://assets/art/NPCs/test_dummy/dummy_front_angry.png" id="3_7x4ee"]
+[ext_resource type="Texture2D" uid="uid://b2ocfqc6tf4ei" path="res://assets/art/NPCs/test_dummy/dummy_front_happy.png" id="4_716d2"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mp5sa")
+}],
+"loop": 1,
+"name": &"back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_khfci")
+}],
+"loop": 1,
+"name": &"back_drinking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_7x4ee")
+}],
+"loop": 1,
+"name": &"front_angry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_716d2")
+}],
+"loop": 1,
+"name": &"front_happy",
+"speed": 5.0
+}]
