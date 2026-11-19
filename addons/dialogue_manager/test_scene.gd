@@ -1,7 +1,7 @@
 class_name BaseDialogueTestScene extends Node2D
 
 
-@export var key: String = ""
+@export var dialogue_entry: String = ""
 #@onready var resource: DialogueResource = load(DMSettings.get_user_value("run_resource_path"))
 @onready var resource: DialogueResource = load("res://assets/dialogue/dialogude-1.dialogue")
 
@@ -16,7 +16,7 @@ func _ready() -> void:
 	# enabled in settings will throw a compiler error here so I'm using `get_singleton` instead.
 	var dialogue_manager: DialogueManager = Engine.get_singleton("DialogueManager")
 	dialogue_manager.dialogue_ended.connect(_on_dialogue_ended)
-	dialogue_manager.show_dialogue_balloon(resource, key if not key.is_empty() else resource.first_cue)
+	dialogue_manager.show_dialogue_balloon(resource, dialogue_entry if not dialogue_entry.is_empty() else resource.first_cue)
 
 
 func _enter_tree() -> void:
