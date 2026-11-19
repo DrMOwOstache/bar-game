@@ -3,6 +3,34 @@
 [ext_resource type="Script" uid="uid://dh4j2qp7w2bce" path="res://scenes/npc_control.gd" id="1_nh2m4"]
 [ext_resource type="SpriteFrames" uid="uid://41bc8ubykvf0" path="res://assets/art/NPCs/test_dummy/dummy_sprite_frames.tres" id="2_abqhh"]
 
+[sub_resource type="Animation" id="Animation_4wlns"]
+resource_name = "new_animation"
+length = 3.0000000000000004
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("character_sprite:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.23333333, 0.47, 0.74, 1.05, 1.32, 1.59, 1.91, 2.17, 2.47, 2.75, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-371, -194), Vector2(-251, -280), Vector2(-227, -221), Vector2(-199.99998, -329), Vector2(-168.99998, -209), Vector2(-141.99998, -348), Vector2(-119.99997, -218.99995), Vector2(-94.999985, -452), Vector2(132.00002, -307.00006), Vector2(558, -524), Vector2(971, -263), Vector2(1167, -415)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("character_sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.1666665, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(2, 2), Vector2(4, 4), Vector2(5, 5)]
+}
+
 [sub_resource type="Animation" id="Animation_abqhh"]
 length = 0.001
 tracks/0/type = "value"
@@ -203,7 +231,7 @@ tracks/0/interp = 2
 tracks/0/loop_wrap = false
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.27, 0.55, 0.9, 1.24, 1.61, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"transitions": PackedFloat32Array(1, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5),
 "update": 0,
 "values": [Vector2(-811, -218), Vector2(-789, -246), Vector2(-739, -209), Vector2(-647, -244.00002), Vector2(-542, -190), Vector2(-432, -240.99998), Vector2(-371, -194)]
 }
@@ -215,45 +243,29 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
+"transitions": PackedFloat32Array(1, 1.035265),
 "update": 0,
 "values": [Vector2(2.5, 2.5), Vector2(2, 2)]
 }
-
-[sub_resource type="Animation" id="Animation_4wlns"]
-resource_name = "new_animation"
-length = 3.0000000000000004
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("character_sprite:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.23333333, 0.47, 0.74, 1.05, 1.32, 1.59, 1.91, 2.17, 2.47, 2.75, 3),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(-371, -194), Vector2(-251, -280), Vector2(-227, -221), Vector2(-199.99998, -329), Vector2(-168.99998, -209), Vector2(-141.99998, -348), Vector2(-119.99997, -218.99995), Vector2(-94.999985, -452), Vector2(132.00002, -307.00006), Vector2(558, -524), Vector2(971, -263), Vector2(1167, -415)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("character_sprite:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2.1666665, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(2, 2), Vector2(4, 4), Vector2(5, 5)]
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("character_sprite:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2),
+"transitions": PackedFloat32Array(2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2),
+"update": 1,
+"values": [0.0, 0.08726646259971647, 0.0, -0.08726646259971647, 0.0, 0.08726646259971647, 0.0, -0.08726646259971647, 0.0, 0.08726646259971647, 0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tl2vt"]
 _data = {
+&"Move_Out_Of_Bar": SubResource("Animation_4wlns"),
 &"RESET": SubResource("Animation_abqhh"),
 &"drink": SubResource("Animation_rv78h"),
-&"move_to_bar": SubResource("Animation_7n8xq"),
-&"new_animation": SubResource("Animation_4wlns")
+&"move_to_bar": SubResource("Animation_7n8xq")
 }
 
 [node name="NPC" type="Node2D" unique_id=1967629777 node_paths=PackedStringArray("character_sprite")]
