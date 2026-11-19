@@ -2,6 +2,8 @@
 
 [ext_resource type="StyleBox" uid="uid://cjg05bdlj4ury" path="res://resources/styles/base_style_panel.tres" id="1_xil8a"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xil8a"]
+
 [sub_resource type="SystemFont" id="SystemFont_5ious"]
 font_names = PackedStringArray("Goldsaber")
 
@@ -9,6 +11,8 @@ font_names = PackedStringArray("Goldsaber")
 font_names = PackedStringArray("Liberation Mono")
 
 [resource]
+Button/font_sizes/font_size = 18
+Button/styles/normal = SubResource("StyleBoxEmpty_xil8a")
 Label/colors/font_shadow_color = Color(0.87957937, 0.21143451, 0.39861467, 0.6745098)
 Label/constants/shadow_offset_x = 15
 Label/constants/shadow_offset_y = 4

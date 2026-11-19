@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://dva06xo6srdqd"]
 
 [ext_resource type="PackedScene" uid="uid://dxao87cwam4fj" path="res://scenes/npc.tscn" id="1_5dekh"]
+[ext_resource type="Script" uid="uid://d00y4pm5no6e0" path="res://scenes/canvas_layer.gd" id="2_bwlfd"]
+[ext_resource type="Theme" uid="uid://fth83jqb0uah" path="res://resources/themes/base_future_theme.tres" id="3_x848m"]
 
 [sub_resource type="Gradient" id="Gradient_bwlfd"]
 offsets = PackedFloat32Array(0)
@@ -74,3 +76,24 @@ offset_right = 1152.0
 offset_bottom = 648.0
 
 [node name="bartender" type="Sprite2D" parent="midground" unique_id=1672142623]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=628219141]
+script = ExtResource("2_bwlfd")
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=638102139]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("3_x848m")
+
+[node name="Button" type="Button" parent="CanvasLayer/Control" unique_id=313135586]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 19.0
+offset_right = 190.0
+offset_bottom = 50.0
+toggle_mode = true
+text = "Recipe Book"
+
+[connection signal="toggled" from="CanvasLayer/Control/Button" to="CanvasLayer" method="_on_button_toggled"]
