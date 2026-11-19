@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cjqn8r88c0jpc"]
+
+[ext_resource type="Theme" uid="uid://fth83jqb0uah" path="res://resources/themes/base_future_theme.tres" id="1_djnf2"]
+
+[node name="text_control" type="Control" unique_id=612513990]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 460.0
+offset_bottom = 261.0
+theme = ExtResource("1_djnf2")
+
+[node name="Panel" type="Panel" parent="." unique_id=182293534]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=918945690]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=159421125]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1314762851]
+layout_mode = 2
+text = "C00L DR1NK"
+
+[node name="description" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=393462445]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "This drink will make you look cool to your fellow \"friend\". [wave]Be the coolest second to Great Friend![wave]
+"

@@ -66,7 +66,7 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="NPC" parent="forground/NPC_control" unique_id=1967629777 instance=ExtResource("1_5dekh")]
-position = Vector2(-531, -172)
+position = Vector2(0, 2)
 
 [node name="midground" type="Control" parent="." unique_id=445043826]
 anchors_preset = 0

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DrinkData" format=3 uid="uid://bww0v2ko8ovc2"]
+
+[ext_resource type="Texture2D" uid="uid://dn5ex2jevsoex" path="res://assets/art/NPCs/test_dummy/dummy_drink.png" id="1_a803i"]
+[ext_resource type="Script" uid="uid://dej708ey2mu78" path="res://scripts/resource_bases/Drink_data.gd" id="1_mff3f"]
+
+[resource]
+script = ExtResource("1_mff3f")
+drink_name = "Cool Drink"
+drink_description = "This drink will make you look cool to your fellow \"friend\". [wave]Be the coolest second to Great Friend![wave]"
+drink_texture = ExtResource("1_a803i")
+metadata/_custom_type_script = "uid://dej708ey2mu78"

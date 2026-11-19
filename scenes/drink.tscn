@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://ua77ftwbp0xw"]
+
+[ext_resource type="Script" uid="uid://yat76jbh2j52" path="res://scripts/drink_controller.gd" id="1_0lkfv"]
+[ext_resource type="Script" uid="uid://dej708ey2mu78" path="res://scripts/resource_bases/Drink_data.gd" id="2_2iv58"]
+[ext_resource type="Texture2D" uid="uid://dn5ex2jevsoex" path="res://assets/art/NPCs/test_dummy/dummy_drink.png" id="2_j45im"]
+[ext_resource type="PackedScene" uid="uid://cjqn8r88c0jpc" path="res://scenes/item_descriptor.tscn" id="3_2iv58"]
+[ext_resource type="Resource" uid="uid://bww0v2ko8ovc2" path="res://resources/drink_resources/dummy_drink.tres" id="3_d6snk"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ap6pj"]
+radius = 43.0
+height = 188.0
+
+[node name="drink" type="Area2D" unique_id=170791720 node_paths=PackedStringArray("drink_visual", "text_control")]
+script = ExtResource("1_0lkfv")
+drink_textures = Array[ExtResource("2_2iv58")]([ExtResource("3_d6snk")])
+drink_visual = NodePath("drink_visual")
+text_control = NodePath("text_control")
+
+[node name="drink_visual" type="TextureRect" parent="." unique_id=811260428]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(20, 20)
+texture = ExtResource("2_j45im")
+
+[node name="drink_collider" type="CollisionShape2D" parent="." unique_id=811943072]
+shape = SubResource("CapsuleShape2D_ap6pj")
+
+[node name="text_control" parent="." unique_id=612513990 instance=ExtResource("3_2iv58")]
