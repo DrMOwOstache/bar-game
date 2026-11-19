@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ccdx4ayjj7osc"]
+
+[ext_resource type="Script" uid="uid://evjb2nngkn5p" path="res://scenes/mumble_speech.gd" id="1_f3uee"]
+
+[node name="Node" type="Node" unique_id=1348410191]
+script = ExtResource("1_f3uee")

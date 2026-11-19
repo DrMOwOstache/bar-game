@@ -1,9 +1,3 @@
-~ test_1
-aa bb cc dd => END!
-~ test_2
-aa bb cc dd => END!
-
-
 ~ start_visit_1
 OW: Get me a beer, please.
 - B: How are you feeling, friend?
