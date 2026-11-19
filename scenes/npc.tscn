@@ -209,7 +209,7 @@ tracks/5/keys = {
 }
 tracks/6/type = "value"
 tracks/6/imported = false
-tracks/6/enabled = true
+tracks/6/enabled = false
 tracks/6/path = NodePath("character_sprite:animation")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
@@ -268,11 +268,11 @@ _data = {
 &"move_to_bar": SubResource("Animation_7n8xq")
 }
 
-[node name="NPC" type="Node2D" unique_id=1967629777 node_paths=PackedStringArray("character_sprite")]
+[node name="NPC" type="Node2D" unique_id=1967629777]
 script = ExtResource("1_nh2m4")
-character_sprite = NodePath("character_sprite")
 
 [node name="character_sprite" type="AnimatedSprite2D" parent="." unique_id=463597869]
+unique_name_in_owner = true
 position = Vector2(-459.00003, -219)
 scale = Vector2(2.5, 2.5)
 skew = -0.12391838
@@ -280,4 +280,5 @@ sprite_frames = ExtResource("2_abqhh")
 animation = &"back"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=402486835]
+unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_tl2vt")
