@@ -1,23 +1,19 @@
 [gd_resource type="Theme" format=3 uid="uid://fth83jqb0uah"]
 
+[ext_resource type="FontFile" uid="uid://cv7qt437rk5pa" path="res://assets/fonts/Goldsaber.otf" id="1_i2xju"]
 [ext_resource type="StyleBox" uid="uid://cjg05bdlj4ury" path="res://resources/styles/base_style_panel.tres" id="1_xil8a"]
-
-[sub_resource type="SystemFont" id="SystemFont_5ious"]
-font_names = PackedStringArray("Goldsaber")
-
-[sub_resource type="SystemFont" id="SystemFont_djnf2"]
-font_names = PackedStringArray("Liberation Mono")
+[ext_resource type="FontFile" uid="uid://y7me0naoc5bl" path="res://assets/fonts/LiberationMono-Regular.ttf" id="3_oujfk"]
 
 [resource]
 Label/colors/font_shadow_color = Color(0.87957937, 0.21143451, 0.39861467, 0.6745098)
 Label/constants/shadow_offset_x = 15
 Label/constants/shadow_offset_y = 4
 Label/font_sizes/font_size = 32
-Label/fonts/font = SubResource("SystemFont_5ious")
+Label/fonts/font = ExtResource("1_i2xju")
 MarginContainer/constants/margin_bottom = 12
-MarginContainer/constants/margin_left = 24
+MarginContainer/constants/margin_left = 28
 MarginContainer/constants/margin_right = 12
 MarginContainer/constants/margin_top = 12
 Panel/styles/panel = ExtResource("1_xil8a")
 RichTextLabel/colors/default_color = Color(0.982485, 0.82060295, 0.8113633, 1)
-RichTextLabel/fonts/normal_font = SubResource("SystemFont_djnf2")
+RichTextLabel/fonts/normal_font = ExtResource("3_oujfk")

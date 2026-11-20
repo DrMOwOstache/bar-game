@@ -1,13 +1,17 @@
 [gd_scene format=3 uid="uid://cjqn8r88c0jpc"]
 
 [ext_resource type="Theme" uid="uid://fth83jqb0uah" path="res://resources/themes/base_future_theme.tres" id="1_djnf2"]
+[ext_resource type="Script" uid="uid://bh0blufrd8g5a" path="res://scripts/item_descriptor.gd" id="2_vaqa4"]
 
-[node name="text_control" type="Control" unique_id=612513990]
+[node name="text_control" type="Control" unique_id=612513990 node_paths=PackedStringArray("title", "description")]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 460.0
 offset_bottom = 261.0
 theme = ExtResource("1_djnf2")
+script = ExtResource("2_vaqa4")
+title = NodePath("MarginContainer/VBoxContainer/Title")
+description = NodePath("MarginContainer/VBoxContainer/description")
 
 [node name="Panel" type="Panel" parent="." unique_id=182293534]
 layout_mode = 1

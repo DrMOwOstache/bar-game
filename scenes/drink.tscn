@@ -5,16 +5,45 @@
 [ext_resource type="Texture2D" uid="uid://dn5ex2jevsoex" path="res://assets/art/NPCs/test_dummy/dummy_drink.png" id="2_j45im"]
 [ext_resource type="PackedScene" uid="uid://cjqn8r88c0jpc" path="res://scenes/item_descriptor.tscn" id="3_2iv58"]
 [ext_resource type="Resource" uid="uid://bww0v2ko8ovc2" path="res://resources/drink_resources/dummy_drink.tres" id="3_d6snk"]
+[ext_resource type="Shader" uid="uid://cn5n62x5qjr6m" path="res://scripts/shaders/cool_fluid.gdshader" id="4_d6snk"]
+[ext_resource type="Resource" uid="uid://b0xglhqd0kja4" path="res://resources/drink_resources/tequila.tres" id="4_hio3u"]
+[ext_resource type="Resource" uid="uid://do6tjwsqta6v1" path="res://resources/drink_resources/vodka.tres" id="5_4svtx"]
+[ext_resource type="Texture2D" uid="uid://d243u17t2khwp" path="res://assets/art/noises/soul.png" id="5_yk87i"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a803i"]
+shader = ExtResource("4_d6snk")
+shader_parameter/noise_texture = ExtResource("5_yk87i")
+shader_parameter/color_1 = Color(0.33492708, 0.6259803, 0.5864717, 1)
+shader_parameter/color_2 = Color(0.92922777, 0.16269088, 0.50127816, 1)
+shader_parameter/drink_amount = 0.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ap6pj"]
 radius = 43.0
 height = 188.0
 
-[node name="drink" type="Area2D" unique_id=170791720 node_paths=PackedStringArray("drink_visual", "text_control")]
+[node name="drink" type="Area2D" unique_id=170791720 node_paths=PackedStringArray("drink_visual", "fluid_visual", "text_control")]
+z_index = 3
 script = ExtResource("1_0lkfv")
-drink_textures = Array[ExtResource("2_2iv58")]([ExtResource("3_d6snk")])
+drinks_data = Array[ExtResource("2_2iv58")]([ExtResource("3_d6snk"), ExtResource("4_hio3u"), ExtResource("5_4svtx")])
 drink_visual = NodePath("drink_visual")
+fluid_visual = NodePath("fluid_visual")
 text_control = NodePath("text_control")
+
+[node name="fluid_visual" type="TextureRect" parent="." unique_id=1676066228]
+material = SubResource("ShaderMaterial_a803i")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -127.0
+offset_right = 120.0
+offset_bottom = 127.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(20, 20)
+texture = ExtResource("2_j45im")
 
 [node name="drink_visual" type="TextureRect" parent="." unique_id=811260428]
 anchors_preset = 8
@@ -22,10 +51,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -120.0
+offset_top = -127.0
+offset_right = 120.0
+offset_bottom = 127.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(20, 20)
@@ -35,3 +64,8 @@ texture = ExtResource("2_j45im")
 shape = SubResource("CapsuleShape2D_ap6pj")
 
 [node name="text_control" parent="." unique_id=612513990 instance=ExtResource("3_2iv58")]
+offset_left = -227.0
+offset_top = 127.0
+offset_right = 233.0
+offset_bottom = 388.0
+mouse_filter = 2

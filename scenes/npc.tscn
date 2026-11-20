@@ -268,9 +268,10 @@ _data = {
 &"move_to_bar": SubResource("Animation_7n8xq")
 }
 
-[node name="NPC" type="Node2D" unique_id=1967629777 node_paths=PackedStringArray("character_sprite")]
+[node name="NPC" type="Node2D" unique_id=1967629777 node_paths=PackedStringArray("character_sprite", "animation_player")]
 script = ExtResource("1_nh2m4")
 character_sprite = NodePath("character_sprite")
+animation_player = NodePath("AnimationPlayer")
 
 [node name="character_sprite" type="AnimatedSprite2D" parent="." unique_id=463597869]
 position = Vector2(-459.00003, -219)

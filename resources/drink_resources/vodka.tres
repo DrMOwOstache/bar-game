@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DrinkData" format=3 uid="uid://do6tjwsqta6v1"]
+
+[ext_resource type="Texture2D" uid="uid://dn5ex2jevsoex" path="res://assets/art/NPCs/test_dummy/dummy_drink.png" id="1_fv20h"]
+[ext_resource type="Script" uid="uid://dej708ey2mu78" path="res://scripts/resource_bases/Drink_data.gd" id="2_k6nlc"]
+
+[resource]
+script = ExtResource("2_k6nlc")
+drink_name = "Vodka"
+drink_description = "pass"
+drink_texture = ExtResource("1_fv20h")
+metadata/_custom_type_script = "uid://dej708ey2mu78"
