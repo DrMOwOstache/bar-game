@@ -39,6 +39,10 @@ colors = PackedColorArray(0.5334419, 0.2969622, 0.29265246, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_cc4rh"]
 gradient = SubResource("Gradient_x848m")
 
+[sub_resource type="Theme" id="Theme_agh12"]
+
+[sub_resource type="Theme" id="Theme_xil8a"]
+
 [node name="bar" type="Control" unique_id=1464480757]
 layout_mode = 3
 anchors_preset = 15
@@ -111,11 +115,54 @@ offset_right = 40.0
 offset_bottom = 40.0
 theme = ExtResource("3_x848m")
 
+[node name="Panel" type="Panel" parent="CanvasLayer/Control" unique_id=1915607326]
+visible = false
+layout_mode = 0
+offset_left = 332.0
+offset_top = 8.0
+offset_right = 953.0
+offset_bottom = 617.0
+theme = SubResource("Theme_agh12")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Control/Panel" unique_id=2135258146]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 23.0
+offset_right = 613.0
+offset_bottom = 598.0
+theme = SubResource("Theme_xil8a")
+text = "Morning Breeze: (Joy-Gin-Vodka)
+A refreshing tonic that boosts your mood after a long day of contributing
+work. For any worker that believes in improving their current situation.
+
+HeartMender:(Grief-Vodka-Tequila)
+For those with broken heart that can’t heal them on their own. Only
+through inner calm can one become productive again.
+
+Forget-Me-Shot:(Grief-Gin)
+When you really need to forget something that hinders you to contribute
+to our Great Friend. Drink with extreme caution.
+
+Lions’ Heart:(Rage-Vodka-Vodka)
+For any brave soul that needs to become stronger to survive the trials of
+our great Nation.
+
+Brick Wall:(Vodka-Gin-Tequila)
+Sometimes you just need to numb yourself to everything. Always good when
+doing it for your Friends.
+
+Best Friends Forever:(Joy-Gin-Tequila)
+For when someone is a bad Friend. Only serve in worst-case scenarios.
+
+Serenity:(Joy-Grief-Rage)
+Own recipe: Use when the illusion is broken."
+fit_content = true
+
 [node name="Button" type="Button" parent="CanvasLayer/Control" unique_id=313135586]
 layout_mode = 0
 offset_left = 87.0
 offset_top = 19.0
-offset_right = 190.0
+offset_right = 239.0
 offset_bottom = 50.0
 toggle_mode = true
 text = "Recipe Book"
