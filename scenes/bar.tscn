@@ -8,12 +8,15 @@
 [ext_resource type="Theme" uid="uid://fth83jqb0uah" path="res://resources/themes/base_future_theme.tres" id="3_x848m"]
 [ext_resource type="Resource" uid="uid://bhiry0hwr07n0" path="res://resources/npcs/office_worker_2.tres" id="4_2j1ym"]
 [ext_resource type="AudioStream" uid="uid://dkdktwk1xi024" path="res://assets/music/background_ambient.wav" id="4_qdsxc"]
+[ext_resource type="Resource" uid="uid://bttuj1sypw1cp" path="res://resources/npcs/military_officer_1.tres" id="4_sgjit"]
 [ext_resource type="Resource" uid="uid://vtnbuwgdeghe" path="res://resources/npcs/office_worker_3.tres" id="5_7r073"]
 [ext_resource type="Script" uid="uid://c5e2yggrul4kk" path="res://scripts/audio_stream_player.gd" id="5_efgdo"]
+[ext_resource type="Resource" uid="uid://bxyba86hcawsc" path="res://resources/npcs/military_officer_2.tres" id="6_iw8av"]
 [ext_resource type="AudioStream" uid="uid://csnt246hrwa1m" path="res://assets/music/Ethanol Dreams (Intro).wav" id="6_nqcov"]
 [ext_resource type="PackedScene" uid="uid://ua77ftwbp0xw" path="res://scenes/drink.tscn" id="7_pjll2"]
 [ext_resource type="AudioStream" uid="uid://bdsp6ywemguti" path="res://assets/music/Ethanol Dreams.wav" id="7_v67d5"]
 [ext_resource type="Texture2D" uid="uid://cmtlxamdqit4q" path="res://assets/art/drinks/cup.png" id="8_53o4m"]
+[ext_resource type="Resource" uid="uid://c1def0ggqkmyx" path="res://resources/npcs/military_officer_3.tres" id="8_iwn1s"]
 [ext_resource type="AudioStream" uid="uid://dhim1wbiplo6k" path="res://assets/music/Ethanol Dreams (Alter-Intro).wav" id="8_rrntp"]
 [ext_resource type="AudioStream" uid="uid://clpmvbe4dhu7k" path="res://assets/music/Ethanol Dreams (Alter).wav" id="9_5qaxt"]
 [ext_resource type="Script" uid="uid://dwp47kxgv7wu6" path="res://scripts/sound_effects.gd" id="10_onlfy"]
@@ -54,7 +57,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_bwlfd")
-npcs = Array[ExtResource("2_qdsxc")]([ExtResource("3_efgdo"), ExtResource("4_2j1ym"), ExtResource("5_7r073")])
+npcs = Array[ExtResource("2_qdsxc")]([ExtResource("3_efgdo"), ExtResource("4_sgjit"), ExtResource("4_2j1ym"), ExtResource("6_iw8av"), ExtResource("5_7r073"), ExtResource("8_iwn1s")])
 
 [node name="background" type="Control" parent="." unique_id=1495741552]
 layout_mode = 1
@@ -217,6 +220,6 @@ script = ExtResource("5_efgdo")
 audiolist = Array[AudioStream]([ExtResource("6_nqcov"), ExtResource("7_v67d5"), ExtResource("8_rrntp"), ExtResource("9_5qaxt"), ExtResource("4_qdsxc")])
 
 [node name="SoundEffects" type="AudioStreamPlayer" parent="Audio" unique_id=536122470]
-bus = &"voice"
+bus = &"Ambience"
 script = ExtResource("10_onlfy")
 audiolist = Array[AudioStream]([ExtResource("11_ma3n4"), ExtResource("12_a3xti"), ExtResource("13_a6y52"), ExtResource("14_taqye"), ExtResource("15_xt7r6"), ExtResource("16_pjll2"), ExtResource("17_53o4m"), ExtResource("18_sgjit"), ExtResource("19_iw8av")])

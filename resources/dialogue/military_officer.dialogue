@@ -1,0 +1,73 @@
+~ start_visit_1
+Military Officer: Good evening. May I have a drink please?
+Bartender:
+- Absolutely. What do you fancy friend?
+	Military Officer: Don’t know actually. First time drinking. Don’t worry, I am of age. *shows military ID*
+- You seem kinda young, do you have ID?
+	Military Officer: Yes sir. Just graduated from the military. *shows military ID*
+- No, this is a library.
+	Military Officer: …Sorry was that sarcasm? I don’t encounter it often enough to know whether or not it’s serious.
+Military Officer: God this is embarrassing. I’m not used to this kind of atmosphere, you can tell right?
+Bartender:
+- All I see is a friend in need. Experience never matters to me.
+	Military Officer: That’s good to hear. Been anxious all day so it’s a breath of fresh air to be somewhere more… welcoming.
+- That’s not important to my job. What matters is what you want to drink so I can get back to work.
+	Military Officer: Oh sorry. I would like ummmm… something ummmm… with alcohol?
+- You look like a handicapped chihuahua in a lions den.
+	Military Officer: *blushes* Its that obvious huh? It’ll be a miracle if I don’t faint tomorrow.
+Military Officer: Sorry if I seem nervous. Tomorrow will be my first official day as solider. I’m posted at a nearby camp. Never wanted to be military yet was picked through the national draft.
+Bartender: Whether or not you want to do the service doesn’t matter, you are doing it regardless to serve us all. I am very thankful for you friend.
+Military Officer: Thank you. That means a lot. Was hoping to find a way to calm my nerves, hence why I am here.
+Bartender: I have an idea for a drink. It’s one that’s said to be quite a kick for the confidence along with low alcohol content so you can do your job properly tomorrow.
+Military Officer: That would be great! One of those please!
+Bartender: Coming right up! => END!
+
+~ after_drink_1
+Military Officer: Wow that’s a strange feeling… but I like it I think? Thanks for all the help friend!
+Bartender: No problem, take care now. => END!
+
+
+~ start_visit_2
+Military Officer: Hello friend, it’s me again. Can I have the same drink as last time please? Like 80 of them if possible?
+Bartender:
+- I don’t think you want the drink simply for the flavour this time? What’s going on friend?
+	Military Officer: Yeah no it tasted like shit but it made feel… something… I don’t know the feeling but I can’t handle whatever godforsaken demons are in my head right now.
+- Strong soldiers like you don’t need that much alcohol. You’ll be fine with just one.
+	Military Officer: …You sound just like my instructor. “You’ll be fine.” “Only the weak would complain like you.” “This is what’s necessary so deal with it.” You really have no idea.
+Military Officer: I had to be a wall guard today of the camp is district 8. That’s one of the outdoor prisoner camps housing the political dissidents of the former regime. I was told that they were violent monsters… but they didn’t resist or do anything. Just sat and walked as ordered… heads looking down the entire time. Several times other guards would walk out with batons hitting them while they were lying defenceless in the dirty mud pleading for them to stop. But they wouldn’t… at least not until the prisoners passed out… I just… I can’t believe that all of it happened.
+Bartender:
+- The prisoners are not Friends. They are Enemies. They need to know that they aren’t allowed to hurt us anymore.
+	Military Officer: Enemies or not they are still humans! Humans deserve decency, no matter the background! Even if they committed atrocities does not mean they are toys for us to torture!
+- Nothing you could have done about it. If you help them then the guards would throw you into the pits too.
+	Military Officer: So if I see something wrong I should just ignore it? You sound just like my parents. You sound like everyone that pretends as if horrors don’t exist in this country.
+Military Officer: Everyone here… accepts these horrors as if they are a necessity! But they are not! We don’t have to use violence to ensure safety! We don’t have to have a society like this! We can be better! We-
+Bartender: You’re mumbling Friend. Talking about things that can’t be done. It’s just as you said, you have demons in your head. My job is to make them go away. I have a drink made to suppress them well. If that doesn’t do the job then feel free to keep talking.
+Military Officer: …You really think you are better than me don’t you “Friend”? Fine make the drink. It won’t change my mind.
+Bartender:… => END!
+
+~ after_drink_2
+Military Officer: I… I… I don’t… feel… sorry I have to go…
+Bartender: Take care Friend. => END!
+
+
+~ start_visit_3
+Military Officer:…
+Bartender:…
+Military Officer:…
+Bartender:…
+Military Officer: I killed them… All of them…
+Bartender: Killed wh-
+Military Officer: I was ordered to kill all the prisoners or the head guard would kill me. I shot all of them. They pleaded and cried… I didn’t stop… I didn’t wanna die… I killed them all… with this rifle right here…
+Bartender: …Friend… you did a good thing. Great Friend is very satisfied with you.
+Military Officer: Like you… are you satisfied?… Working behind the bar… Mindlessly serving that goddamn regime?…
+Bartender: I just serve drinks. You look like you could need one.
+Military Officer: Yeah I do. Not that it matters. I could shoot you right here and it wouldn’t change what I’ve done.
+Bartender: But a drink might, let me pour you the house special. After that shoot me as much as you’d like.
+Military Officer: …Go… => END!
+
+~ after_drink_3
+Military Officer: …
+Bartender: …
+Military Officer: …
+Bartender: Walk two blocks down until you see the big white neon sign on the skyscraper. It reads “Reeducation Center”. Talk to the woman behind the counter and say that you need to be retaught.
+Bartender: Goodbye Friend. => END!

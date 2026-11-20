@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://8g4t67dlb4r4"
+path="res://.godot/imported/military_officer.dialogue-c80484d40a81daa7d8777ef991a724d9.tres"
+
+[deps]
+
+source_file="res://resources/dialogue/military_officer.dialogue"
+dest_files=["res://.godot/imported/military_officer.dialogue-c80484d40a81daa7d8777ef991a724d9.tres"]
+
+[params]
+
+defaults=true
