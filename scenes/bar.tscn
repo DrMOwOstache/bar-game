@@ -3,6 +3,29 @@
 [ext_resource type="PackedScene" uid="uid://dxao87cwam4fj" path="res://scenes/npc.tscn" id="1_5dekh"]
 [ext_resource type="PackedScene" uid="uid://ua77ftwbp0xw" path="res://scenes/drink.tscn" id="2_bwlfd"]
 [ext_resource type="Texture2D" uid="uid://ccup5syk2l3d" path="res://assets/art/NPCs/test_dummy/dummy_shaker.png" id="3_x848m"]
+[ext_resource type="Script" uid="uid://2d88oachdtot" path="res://scripts/bar.gd" id="1_bwlfd"]
+[ext_resource type="Script" uid="uid://d00y4pm5no6e0" path="res://scenes/canvas_layer.gd" id="2_bwlfd"]
+[ext_resource type="Script" uid="uid://dp6jl6e4g2fqd" path="res://scripts/resource_bases/npc_data.gd" id="2_qdsxc"]
+[ext_resource type="Resource" uid="uid://dqhjsbehjiayf" path="res://resources/npcs/office_worker_1.tres" id="3_efgdo"]
+[ext_resource type="Theme" uid="uid://fth83jqb0uah" path="res://resources/themes/base_future_theme.tres" id="3_x848m"]
+[ext_resource type="Resource" uid="uid://bhiry0hwr07n0" path="res://resources/npcs/office_worker_2.tres" id="4_2j1ym"]
+[ext_resource type="AudioStream" uid="uid://dkdktwk1xi024" path="res://assets/music/background_ambient.wav" id="4_qdsxc"]
+[ext_resource type="Resource" uid="uid://vtnbuwgdeghe" path="res://resources/npcs/office_worker_3.tres" id="5_7r073"]
+[ext_resource type="Script" uid="uid://c5e2yggrul4kk" path="res://scenes/audio_stream_player.gd" id="5_efgdo"]
+[ext_resource type="AudioStream" uid="uid://csnt246hrwa1m" path="res://assets/music/Ethanol Dreams (Intro).wav" id="6_nqcov"]
+[ext_resource type="AudioStream" uid="uid://bdsp6ywemguti" path="res://assets/music/Ethanol Dreams.wav" id="7_v67d5"]
+[ext_resource type="AudioStream" uid="uid://dhim1wbiplo6k" path="res://assets/music/Ethanol Dreams (Alter-Intro).wav" id="8_rrntp"]
+[ext_resource type="AudioStream" uid="uid://clpmvbe4dhu7k" path="res://assets/music/Ethanol Dreams (Alter).wav" id="9_5qaxt"]
+[ext_resource type="Script" uid="uid://dwp47kxgv7wu6" path="res://scenes/sound_effects.gd" id="10_onlfy"]
+[ext_resource type="AudioStream" uid="uid://g6n8s67v8ijw" path="res://assets/music/bottle_sound.wav" id="11_ma3n4"]
+[ext_resource type="AudioStream" uid="uid://hs1hffxjt11v" path="res://assets/music/cocktail_shake.wav" id="12_a3xti"]
+[ext_resource type="AudioStream" uid="uid://c0x3pgoka0708" path="res://assets/music/ding.wav" id="13_a6y52"]
+[ext_resource type="AudioStream" uid="uid://ceetcfxd4osok" path="res://assets/music/glass_clink.01.Audio 1.wav" id="14_taqye"]
+[ext_resource type="AudioStream" uid="uid://cwwmkaisdh1lo" path="res://assets/music/glass_clink.02.Audio 2.wav" id="15_xt7r6"]
+[ext_resource type="AudioStream" uid="uid://dqcdss77ply6a" path="res://assets/music/glass_clink.03.Audio 3.wav" id="16_pjll2"]
+[ext_resource type="AudioStream" uid="uid://bq0c5mobxrnp6" path="res://assets/music/glass_clink.04.Audio 4.wav" id="17_53o4m"]
+[ext_resource type="AudioStream" uid="uid://dhc3b7cb2hai6" path="res://assets/music/ice.wav" id="18_sgjit"]
+[ext_resource type="AudioStream" uid="uid://c880c16tspdvy" path="res://assets/music/liquid_pour.wav" id="19_iw8av"]
 
 [sub_resource type="Gradient" id="Gradient_bwlfd"]
 offsets = PackedFloat32Array(0)
@@ -18,6 +41,10 @@ colors = PackedColorArray(0.5334419, 0.2969622, 0.29265246, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_cc4rh"]
 gradient = SubResource("Gradient_x848m")
 
+[sub_resource type="Theme" id="Theme_agh12"]
+
+[sub_resource type="Theme" id="Theme_xil8a"]
+
 [node name="bar" type="Control" unique_id=1464480757]
 layout_mode = 3
 anchors_preset = 15
@@ -26,6 +53,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+script = ExtResource("1_bwlfd")
+npcs = Array[ExtResource("2_qdsxc")]([ExtResource("3_efgdo"), ExtResource("4_2j1ym"), ExtResource("5_7r073")])
 
 [node name="background" type="Control" parent="." unique_id=1495741552]
 layout_mode = 1
@@ -72,6 +101,7 @@ grow_vertical = 0
 mouse_filter = 2
 
 [node name="NPC" parent="forground/NPC_control" unique_id=1967629777 instance=ExtResource("1_5dekh")]
+unique_name_in_owner = true
 position = Vector2(0, 2)
 
 [node name="midground" type="Control" parent="." unique_id=445043826]
@@ -103,3 +133,78 @@ position = Vector2(496, 230)
 position = Vector2(390, 354)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_x848m")
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=628219141]
+script = ExtResource("2_bwlfd")
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=638102139]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("3_x848m")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control" unique_id=1915607326]
+visible = false
+layout_mode = 0
+offset_left = 332.0
+offset_top = 8.0
+offset_right = 953.0
+offset_bottom = 617.0
+theme = SubResource("Theme_agh12")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Control/Panel" unique_id=2135258146]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 23.0
+offset_right = 613.0
+offset_bottom = 598.0
+theme = SubResource("Theme_xil8a")
+text = "Morning Breeze: (Joy-Gin-Vodka)
+A refreshing tonic that boosts your mood after a long day of contributing
+work. For any worker that believes in improving their current situation.
+
+HeartMender:(Grief-Vodka-Tequila)
+For those with broken heart that can’t heal them on their own. Only
+through inner calm can one become productive again.
+
+Forget-Me-Shot:(Grief-Gin)
+When you really need to forget something that hinders you to contribute
+to our Great Friend. Drink with extreme caution.
+
+Lions’ Heart:(Rage-Vodka-Vodka)
+For any brave soul that needs to become stronger to survive the trials of
+our great Nation.
+
+Brick Wall:(Vodka-Gin-Tequila)
+Sometimes you just need to numb yourself to everything. Always good when
+doing it for your Friends.
+
+Best Friends Forever:(Joy-Gin-Tequila)
+For when someone is a bad Friend. Only serve in worst-case scenarios.
+
+Serenity:(Joy-Grief-Rage)
+Own recipe: Use when the illusion is broken."
+fit_content = true
+
+[node name="Button" type="Button" parent="CanvasLayer/Control" unique_id=313135586]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 19.0
+offset_right = 239.0
+offset_bottom = 50.0
+toggle_mode = true
+text = "Recipe Book"
+
+[node name="Audio" type="Node" parent="." unique_id=835692645]
+
+[node name="Music" type="AudioStreamPlayer" parent="Audio" unique_id=1152607281]
+stream = ExtResource("4_qdsxc")
+autoplay = true
+script = ExtResource("5_efgdo")
+audiolist = Array[AudioStream]([ExtResource("6_nqcov"), ExtResource("7_v67d5"), ExtResource("8_rrntp"), ExtResource("9_5qaxt"), ExtResource("4_qdsxc")])
+
+[node name="SoundEffects" type="AudioStreamPlayer" parent="Audio" unique_id=536122470]
+script = ExtResource("10_onlfy")
+audiolist = Array[AudioStream]([ExtResource("11_ma3n4"), ExtResource("12_a3xti"), ExtResource("13_a6y52"), ExtResource("14_taqye"), ExtResource("15_xt7r6"), ExtResource("16_pjll2"), ExtResource("17_53o4m"), ExtResource("18_sgjit"), ExtResource("19_iw8av")])
+
+[connection signal="toggled" from="CanvasLayer/Control/Button" to="CanvasLayer" method="_on_button_toggled"]

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="NPCDialogueData" format=3 uid="uid://bwro64lb1h4df"]
+
+[ext_resource type="Resource" uid="uid://durcxuoteriuy" path="res://resources/dialogue/office_worker.dialogue" id="1_gngx2"]
+[ext_resource type="Script" uid="uid://dp6jl6e4g2fqd" path="res://scripts/resource_bases/npc_data.gd" id="2_geydl"]
+[ext_resource type="SpriteFrames" uid="uid://41bc8ubykvf0" path="res://assets/art/NPCs/test_dummy/dummy_sprite_frames.tres" id="3_a4wu8"]
+
+[resource]
+script = ExtResource("2_geydl")
+start_visit_cue = &"test_1"
+after_drink_cue = &"test_2"
+sprite_frames = ExtResource("3_a4wu8")
+dialogue_res = ExtResource("1_gngx2")
+metadata/_custom_type_script = "uid://dp6jl6e4g2fqd"

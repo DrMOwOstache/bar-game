@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://durcxuoteriuy"
+path="res://.godot/imported/office_worker.dialogue-2b294cd31e93cd25ef8abc63524fae8b.tres"
+
+[deps]
+
+source_file="res://resources/dialogue/office_worker.dialogue"
+dest_files=["res://.godot/imported/office_worker.dialogue-2b294cd31e93cd25ef8abc63524fae8b.tres"]
+
+[params]
+
+defaults=true
