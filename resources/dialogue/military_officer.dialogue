@@ -23,7 +23,7 @@ Military Officer: That would be great! One of those please!
 Bartender: Coming right up! => END!
 
 ~ after_drink_1
-Military Officer: Wow that’s a strange feeling… but I like it I think? Thanks for all the help friend!
+Military Officer: Wow that’s a strange feeling…[wait=0.7] but I like it I think? Thanks for all the help friend!
 Bartender: No problem, take care now. => END!
 
 
@@ -31,10 +31,10 @@ Bartender: No problem, take care now. => END!
 Military Officer: Hello friend, it’s me again. Can I have the same drink as last time please? Like 80 of them if possible?
 Bartender:
 - I don’t think you want the drink simply for the flavour this time? What’s going on friend?
-	Military Officer: Yeah no it tasted like shit but it made feel… something… I don’t know the feeling but I can’t handle whatever godforsaken demons are in my head right now.
+	Military Officer: Yeah no it tasted like shit but it made feel…[wait=0.5] something…[wait=0.9] I don’t know the feeling but I can’t handle whatever godforsaken demons are in my head right now.
 - Strong soldiers like you don’t need that much alcohol. You’ll be fine with just one.
 	Military Officer: …You sound just like my instructor. “You’ll be fine.” “Only the weak would complain like you.” “This is what’s necessary so deal with it.” You really have no idea.
-Military Officer: I had to be a wall guard today of the camp is district 8. That’s one of the outdoor prisoner camps housing the political dissidents of the former regime. I was told that they were violent monsters… but they didn’t resist or do anything. Just sat and walked as ordered… heads looking down the entire time. Several times other guards would walk out with batons hitting them while they were lying defenceless in the dirty mud pleading for them to stop. But they wouldn’t… at least not until the prisoners passed out… I just… I can’t believe that all of it happened.
+Military Officer: I had to be a wall guard today of the camp is district 8. That’s one of the outdoor prisoner camps housing the political dissidents of the former regime. I was told that they were violent monsters… but they didn’t resist or do anything. Just sat and walked as ordered…[wait=0.75] heads looking down the entire time. Several times other guards would walk out with batons hitting them while they were lying defenceless in the dirty mud pleading for them to stop. But they wouldn’t… at least not until the prisoners passed out…[wait=0.8] I just…[wait=0.55] I can’t believe that all of it happened.
 Bartender:
 - The prisoners are not Friends. They are Enemies. They need to know that they aren’t allowed to hurt us anymore.
 	Military Officer: Enemies or not they are still humans! Humans deserve decency, no matter the background! Even if they committed atrocities does not mean they are toys for us to torture!
@@ -46,7 +46,7 @@ Military Officer: …You really think you are better than me don’t you “Frie
 Bartender:… => END!
 
 ~ after_drink_2
-Military Officer: I… I… I don’t… feel… sorry I have to go…
+Military Officer: I…[wait=0.7] I…[wait=0.65] I don’t…[wait=0.9] feel…[wait=1.1] sorry I have to go…
 Bartender: Take care Friend. => END!
 
 
@@ -55,15 +55,15 @@ Military Officer:…
 Bartender:…
 Military Officer:…
 Bartender:…
-Military Officer: I killed them… All of them…
+Military Officer: I killed them…[wait=1.2] All of them…
 Bartender: Killed wh-
-Military Officer: I was ordered to kill all the prisoners or the head guard would kill me. I shot all of them. They pleaded and cried… I didn’t stop… I didn’t wanna die… I killed them all… with this rifle right here…
-Bartender: …Friend… you did a good thing. Great Friend is very satisfied with you.
-Military Officer: Like you… are you satisfied?… Working behind the bar… Mindlessly serving that goddamn regime?…
+Military Officer: I was ordered to kill all the prisoners or the head guard would kill me. I shot all of them. They pleaded and cried… I didn’t stop…[wait=0.8] I didn’t wanna die…[wait=0.7] I killed them all…[wait=0.9] with this rifle right here…[wait=0.75]
+Bartender: …Friend…[wait=0.6] you did a good thing. Great Friend is very satisfied with you.
+Military Officer: Like you…[wait=0.5] are you satisfied?…[wait=0.8] Working behind the bar…[wait=0.7] Mindlessly serving that goddamn regime?…[wait=1.1]
 Bartender: I just serve drinks. You look like you could need one.
 Military Officer: Yeah I do. Not that it matters. I could shoot you right here and it wouldn’t change what I’ve done.
 Bartender: But a drink might, let me pour you the house special. After that shoot me as much as you’d like.
-Military Officer: …Go… => END!
+Military Officer: …Go…[wait=0.7] => END!
 
 ~ after_drink_3
 Military Officer: …

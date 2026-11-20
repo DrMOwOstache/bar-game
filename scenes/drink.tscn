@@ -71,6 +71,7 @@ texture = ExtResource("9_4svtx")
 shape = SubResource("CapsuleShape2D_ap6pj")
 
 [node name="text_control" parent="." unique_id=612513990 instance=ExtResource("3_2iv58")]
+z_index = 12
 offset_left = -227.0
 offset_top = 127.0
 offset_right = 233.0
