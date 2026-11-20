@@ -209,13 +209,13 @@ tracks/5/keys = {
 }
 tracks/6/type = "value"
 tracks/6/imported = false
-tracks/6/enabled = false
+tracks/6/enabled = true
 tracks/6/path = NodePath("character_sprite:animation")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0, 0.26666668, 2.03),
-"transitions": PackedFloat32Array(1, 1, 1),
+"transitions": PackedFloat32Array(1, 1e-05, 1),
 "update": 1,
 "values": [&"back", &"back_drinking", &"back"]
 }
@@ -268,10 +268,8 @@ _data = {
 &"move_to_bar": SubResource("Animation_7n8xq")
 }
 
-[node name="NPC" type="Node2D" unique_id=1967629777 node_paths=PackedStringArray("character_sprite", "animation_player")]
+[node name="NPC" type="Node2D" unique_id=1967629777]
 script = ExtResource("1_nh2m4")
-character_sprite = NodePath("character_sprite")
-animation_player = NodePath("AnimationPlayer")
 
 [node name="character_sprite" type="AnimatedSprite2D" parent="." unique_id=463597869]
 unique_name_in_owner = true

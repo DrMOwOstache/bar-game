@@ -1,13 +1,10 @@
 class_name NPC
 extends Node2D
 
+@export var shaker: Sprite2D
+
 @onready var character_sprite: AnimatedSprite2D = %character_sprite
 @onready var anim_player: AnimationPlayer = %AnimationPlayer
-
-
-func drink_the_fluid() -> void:
-	anim_player.play("drink", -1, 1.0, false)
-
 
 @onready var dialogue_manager: DialogueManager = Engine.get_singleton("DialogueManager") 
 
@@ -19,6 +16,10 @@ signal exited_bar
 
 var _npc_data: NPCDialogueData = null
 var _balloon: Node = null
+var tween: Tween
+
+func drink_the_fluid() -> void:
+	anim_player.play("drink", -1, 1.0, false)
 
 func _ready() -> void:
 	self.hide()
@@ -84,7 +85,7 @@ func _on_dialogue_start_visit_finished(_res: DialogueResource) -> void:
 	_balloon = null
 	finished_dialogue_start_visit.emit()
 	# DEBUG CODE
-	play_anim(AnimType.DrinkAnim)
+	#play_anim(AnimType.DrinkAnim)
 	# Remove after Bar Minigame implemented
 	dialogue_manager.dialogue_ended.disconnect(_on_dialogue_start_visit_finished)
 
@@ -92,5 +93,21 @@ func _on_dialogue_after_drink_finished(_res: DialogueResource) -> void:
 	_balloon.queue_free()
 	_balloon = null
 	finished_dialogue_after_drink.emit()
-	play_anim(AnimType.ExitAnim)
+	#play_anim(AnimType.ExitAnim)
+	make_him_drink()
 	dialogue_manager.dialogue_ended.disconnect(_on_dialogue_after_drink_finished)
+	
+func make_him_drink() -> void:
+	var original_shaker_position = shaker.position
+	tween = create_tween()
+	tween.set_ease(Tween.EASE_OUT)
+	tween.set_trans(Tween.TRANS_CUBIC)
+	tween.tween_property(shaker,"visible",false,1.0)
+	tween.parallel().tween_property(shaker,"position", shaker.position + Vector2(70.0,170.0), 1.0)
+	
+	tween.tween_property(shaker,"visible",false,0.9)
+	tween.parallel().tween_property(shaker,"position", shaker.position + Vector2(-50.0,-60.0), 0.9)
+
+	tween.tween_property(shaker,"visible",true,0.1)
+	tween.tween_property(shaker,"position", original_shaker_position, 0.1)
+	await tween.finished

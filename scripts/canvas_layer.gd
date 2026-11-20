@@ -1,7 +1,7 @@
-extends CanvasLayer
+extends Control
 
-@onready var text_page: Panel = $Control/Panel
-@onready var toggle_button: Button = $Control/Button
+@onready var text_page: Panel = $Panel
+@onready var toggle_button: Button = $Button
 
 
 func _ready() -> void:

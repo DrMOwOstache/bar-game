@@ -10,7 +10,6 @@ extends Area2D
 
 @export var pour_position: Node2D
 @export var npc_node: Node2D
-@export var shaker: Sprite2D
 
 var tween: Tween
 var mouse_in = false
@@ -52,24 +51,10 @@ func filldrink(start_point: Vector2, end_point: Vector2) -> void:
 	tween.tween_property(self,"position",start_point,0.2)
 	await tween.finished
 	pouring = false
-	npc_node.call("drink_the_fluid")
+
 	tween.stop()
-	make_him_drink()
 	
 
-func make_him_drink() -> void:
-	var original_shaker_position = shaker.position
-	tween = create_tween()
-	tween.set_ease(Tween.EASE_OUT)
-	tween.set_trans(Tween.TRANS_CUBIC)
-	tween.tween_property(shaker,"visible",false,1.0)
-	tween.parallel().tween_property(shaker,"position", shaker.position + Vector2(70.0,170.0), 1.0)
-	
-	tween.tween_property(shaker,"visible",false,0.9)
-	tween.parallel().tween_property(shaker,"position", shaker.position + Vector2(-50.0,-60.0), 0.9)
 
-	tween.tween_property(shaker,"visible",true,0.1)
-	tween.tween_property(shaker,"position", original_shaker_position, 0.1)
-	await tween.finished
 	
 	
