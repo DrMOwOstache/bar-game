@@ -1,11 +1,13 @@
 [gd_resource type="Resource" script_class="DrinkData" format=3 uid="uid://b0xglhqd0kja4"]
 
-[ext_resource type="Texture2D" uid="uid://dn5ex2jevsoex" path="res://assets/art/NPCs/test_dummy/dummy_drink.png" id="1_2k33h"]
+[ext_resource type="Texture2D" uid="uid://ctmr71t48bott" path="res://assets/art/drinks/tequila/Tequila.png" id="1_2k33h"]
+[ext_resource type="Shader" uid="uid://cn5n62x5qjr6m" path="res://scripts/shaders/cool_fluid.gdshader" id="1_fd2dd"]
 [ext_resource type="Script" uid="uid://dej708ey2mu78" path="res://scripts/resource_bases/Drink_data.gd" id="1_lf8p4"]
 
 [resource]
 script = ExtResource("1_lf8p4")
 drink_name = "Tequila"
-drink_description = "pass"
+drink_description = "Made from the blue agave plant, primarily in the area surrounding the town of Tequila 65 km (40 mi) northwest of Guadalajara, and in the Jaliscan Highlands (Los Altos de Jalisco) of the central western Mexican state of Jalisco."
 drink_texture = ExtResource("1_2k33h")
+drink_fluid = ExtResource("1_fd2dd")
 metadata/_custom_type_script = "uid://dej708ey2mu78"

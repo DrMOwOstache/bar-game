@@ -9,6 +9,11 @@
 [ext_resource type="Resource" uid="uid://b0xglhqd0kja4" path="res://resources/drink_resources/tequila.tres" id="4_hio3u"]
 [ext_resource type="Resource" uid="uid://do6tjwsqta6v1" path="res://resources/drink_resources/vodka.tres" id="5_4svtx"]
 [ext_resource type="Texture2D" uid="uid://d243u17t2khwp" path="res://assets/art/noises/soul.png" id="5_yk87i"]
+[ext_resource type="Resource" uid="uid://cch2xoxfonyuy" path="res://resources/drink_resources/gin.tres" id="6_fsfxr"]
+[ext_resource type="Resource" uid="uid://cdplqck7fxqo5" path="res://resources/drink_resources/joy.tres" id="7_78iqq"]
+[ext_resource type="Resource" uid="uid://brquw10lefa6v" path="res://resources/drink_resources/grief.tres" id="8_78iqq"]
+[ext_resource type="Texture2D" uid="uid://bvv3twv36bcjn" path="res://assets/art/drinks/vodka/Vodka.png" id="9_4svtx"]
+[ext_resource type="Resource" uid="uid://cmg8rxop6mwii" path="res://resources/drink_resources/rage.tres" id="9_t0h0a"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_a803i"]
 shader = ExtResource("4_d6snk")
@@ -24,12 +29,13 @@ height = 188.0
 [node name="drink" type="Area2D" unique_id=170791720 node_paths=PackedStringArray("drink_visual", "fluid_visual", "text_control")]
 z_index = 3
 script = ExtResource("1_0lkfv")
-drinks_data = Array[ExtResource("2_2iv58")]([ExtResource("3_d6snk"), ExtResource("4_hio3u"), ExtResource("5_4svtx")])
+drinks_data = Array[ExtResource("2_2iv58")]([ExtResource("3_d6snk"), ExtResource("4_hio3u"), ExtResource("5_4svtx"), ExtResource("6_fsfxr"), ExtResource("7_78iqq"), ExtResource("8_78iqq"), ExtResource("9_t0h0a")])
 drink_visual = NodePath("drink_visual")
 fluid_visual = NodePath("fluid_visual")
 text_control = NodePath("text_control")
 
 [node name="fluid_visual" type="TextureRect" parent="." unique_id=1676066228]
+visible = false
 material = SubResource("ShaderMaterial_a803i")
 anchors_preset = 8
 anchor_left = 0.5
@@ -51,14 +57,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -120.0
-offset_top = -127.0
-offset_right = 120.0
-offset_bottom = 127.0
+offset_left = -172.5
+offset_top = -305.0
+offset_right = 172.5
+offset_bottom = 305.0
 grow_horizontal = 2
 grow_vertical = 2
-pivot_offset = Vector2(20, 20)
-texture = ExtResource("2_j45im")
+scale = Vector2(0.45, 0.45)
+pivot_offset = Vector2(172.5, 305)
+texture = ExtResource("9_4svtx")
 
 [node name="drink_collider" type="CollisionShape2D" parent="." unique_id=811943072]
 shape = SubResource("CapsuleShape2D_ap6pj")

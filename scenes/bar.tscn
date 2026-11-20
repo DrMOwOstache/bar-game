@@ -93,6 +93,7 @@ mouse_filter = 2
 
 [node name="NPC" parent="forground/NPC_control" unique_id=1967629777 node_paths=PackedStringArray("shaker") instance=ExtResource("1_5dekh")]
 unique_name_in_owner = true
+visible = false
 z_index = 2
 position = Vector2(0, 2)
 shaker = NodePath("../../../midground/serve/shaker")
@@ -110,10 +111,51 @@ mouse_filter = 2
 
 [node name="drinks" type="Node2D" parent="midground" unique_id=839620645]
 
-[node name="drink" parent="midground/drinks" unique_id=170791720 node_paths=PackedStringArray("pour_position", "npc_node") instance=ExtResource("7_pjll2")]
+[node name="vodka" parent="midground/drinks" unique_id=170791720 node_paths=PackedStringArray("pour_position", "npc_node") instance=ExtResource("7_pjll2")]
 z_index = 2
-position = Vector2(966, 271)
+position = Vector2(475, 266)
 scale = Vector2(0.75, 0.75)
+current_drink = 2
+pour_position = NodePath("../../serve/pour_from")
+npc_node = NodePath("../../../forground/NPC_control/NPC")
+
+[node name="tequila" parent="midground/drinks" unique_id=1409637342 node_paths=PackedStringArray("pour_position", "npc_node") instance=ExtResource("7_pjll2")]
+z_index = 2
+position = Vector2(571, 266)
+scale = Vector2(0.75, 0.75)
+current_drink = 1
+pour_position = NodePath("../../serve/pour_from")
+npc_node = NodePath("../../../forground/NPC_control/NPC")
+
+[node name="gin" parent="midground/drinks" unique_id=402819894 node_paths=PackedStringArray("pour_position", "npc_node") instance=ExtResource("7_pjll2")]
+z_index = 2
+position = Vector2(671, 266)
+scale = Vector2(0.75, 0.75)
+current_drink = 3
+pour_position = NodePath("../../serve/pour_from")
+npc_node = NodePath("../../../forground/NPC_control/NPC")
+
+[node name="joy" parent="midground/drinks" unique_id=666328096 node_paths=PackedStringArray("pour_position", "npc_node") instance=ExtResource("7_pjll2")]
+z_index = 2
+position = Vector2(768.00006, 266)
+scale = Vector2(0.75, 0.75)
+current_drink = 4
+pour_position = NodePath("../../serve/pour_from")
+npc_node = NodePath("../../../forground/NPC_control/NPC")
+
+[node name="grief" parent="midground/drinks" unique_id=953572397 node_paths=PackedStringArray("pour_position", "npc_node") instance=ExtResource("7_pjll2")]
+z_index = 2
+position = Vector2(864.00006, 266)
+scale = Vector2(0.75, 0.75)
+current_drink = 5
+pour_position = NodePath("../../serve/pour_from")
+npc_node = NodePath("../../../forground/NPC_control/NPC")
+
+[node name="rage" parent="midground/drinks" unique_id=1575157209 node_paths=PackedStringArray("pour_position", "npc_node") instance=ExtResource("7_pjll2")]
+z_index = 2
+position = Vector2(969, 266)
+scale = Vector2(0.75, 0.75)
+current_drink = 6
 pour_position = NodePath("../../serve/pour_from")
 npc_node = NodePath("../../../forground/NPC_control/NPC")
 

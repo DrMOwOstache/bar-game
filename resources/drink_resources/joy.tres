@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="DrinkData" format=3 uid="uid://cdplqck7fxqo5"]
+
+[ext_resource type="Shader" uid="uid://cn5n62x5qjr6m" path="res://scripts/shaders/cool_fluid.gdshader" id="1_vpouh"]
+[ext_resource type="Texture2D" uid="uid://cdsxndgfpedu0" path="res://assets/art/drinks/joy/Joy.png" id="2_vpouh"]
+[ext_resource type="Script" uid="uid://dej708ey2mu78" path="res://scripts/resource_bases/Drink_data.gd" id="3_7i42p"]
+
+[resource]
+script = ExtResource("3_7i42p")
+drink_name = "Joy"
+drink_description = "A concentrated liquor made from extracts of ecstasy with a hint of sweet fun."
+drink_texture = ExtResource("2_vpouh")
+drink_fluid = ExtResource("1_vpouh")
+metadata/_custom_type_script = "uid://dej708ey2mu78"

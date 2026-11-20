@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="DrinkData" format=3 uid="uid://cch2xoxfonyuy"]
+
+[ext_resource type="Shader" uid="uid://cn5n62x5qjr6m" path="res://scripts/shaders/cool_fluid.gdshader" id="1_2t1n2"]
+[ext_resource type="Texture2D" uid="uid://c0qk08wattl13" path="res://assets/art/drinks/gin/Gin.png" id="2_2t1n2"]
+[ext_resource type="Script" uid="uid://dej708ey2mu78" path="res://scripts/resource_bases/Drink_data.gd" id="3_ecua5"]
+
+[resource]
+script = ExtResource("3_ecua5")
+drink_name = "Gin"
+drink_description = "Distilled alcoholic drink flavoured with juniper berries and other botanical ingredients. It originated as a medicinal liquor made by monks and alchemists in the 12th Century in Salerno, Italy. The modern gin was modified in Flanders and the Netherlands to provide aqua vita from distillates of grapes and grains, becoming an object of commerce in the spirits industry."
+drink_texture = ExtResource("2_2t1n2")
+drink_fluid = ExtResource("1_2t1n2")
+metadata/_custom_type_script = "uid://dej708ey2mu78"

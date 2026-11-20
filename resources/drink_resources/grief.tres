@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="DrinkData" format=3 uid="uid://brquw10lefa6v"]
+
+[ext_resource type="Shader" uid="uid://cn5n62x5qjr6m" path="res://scripts/shaders/cool_fluid.gdshader" id="1_ve6ui"]
+[ext_resource type="Texture2D" uid="uid://dgvftobhnb2mo" path="res://assets/art/drinks/grief/Grief.png" id="2_ve6ui"]
+[ext_resource type="Script" uid="uid://dej708ey2mu78" path="res://scripts/resource_bases/Drink_data.gd" id="3_1y0rq"]
+
+[resource]
+script = ExtResource("3_1y0rq")
+drink_name = "Grief"
+drink_description = "A distilled alcohol made from fermented despair and desolation from its raw form."
+drink_texture = ExtResource("2_ve6ui")
+drink_fluid = ExtResource("1_ve6ui")
+metadata/_custom_type_script = "uid://dej708ey2mu78"
