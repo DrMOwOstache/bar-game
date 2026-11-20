@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dxao87cwam4fj"]
 
 [ext_resource type="Script" uid="uid://dh4j2qp7w2bce" path="res://scripts/npc_control.gd" id="1_nh2m4"]
-[ext_resource type="SpriteFrames" uid="uid://41bc8ubykvf0" path="res://assets/art/NPCs/test_dummy/dummy_sprite_frames.tres" id="2_abqhh"]
+[ext_resource type="SpriteFrames" uid="uid://c5n02wvad4wpv" path="res://assets/art/NPCs/office-worker/office_worker_sprite_frames.tres" id="2_abqhh"]
 
 [sub_resource type="Animation" id="Animation_4wlns"]
 resource_name = "new_animation"

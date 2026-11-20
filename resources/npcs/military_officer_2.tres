@@ -2,12 +2,12 @@
 
 [ext_resource type="Resource" uid="uid://8g4t67dlb4r4" path="res://resources/dialogue/military_officer.dialogue" id="1_dnkdf"]
 [ext_resource type="Script" uid="uid://dp6jl6e4g2fqd" path="res://scripts/resource_bases/npc_data.gd" id="2_vbe50"]
-[ext_resource type="SpriteFrames" uid="uid://41bc8ubykvf0" path="res://assets/art/NPCs/test_dummy/dummy_sprite_frames.tres" id="3_ejn65"]
+[ext_resource type="SpriteFrames" uid="uid://cdbcysq8812jc" path="res://assets/art/NPCs/solder/solder_sprite_frames.tres" id="3_dnkdf"]
 
 [resource]
 script = ExtResource("2_vbe50")
 start_visit_cue = &"start_visit_2"
 after_drink_cue = &"after_drink_2"
-sprite_frames = ExtResource("3_ejn65")
+sprite_frames = ExtResource("3_dnkdf")
 dialogue_res = ExtResource("1_dnkdf")
 metadata/_custom_type_script = "uid://dp6jl6e4g2fqd"

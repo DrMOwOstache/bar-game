@@ -2,12 +2,12 @@
 
 [ext_resource type="Resource" uid="uid://durcxuoteriuy" path="res://resources/dialogue/office_worker.dialogue" id="1_o3g1n"]
 [ext_resource type="Script" uid="uid://dp6jl6e4g2fqd" path="res://scripts/resource_bases/npc_data.gd" id="2_nq0tq"]
-[ext_resource type="SpriteFrames" uid="uid://41bc8ubykvf0" path="res://assets/art/NPCs/test_dummy/dummy_sprite_frames.tres" id="3_8v6o7"]
+[ext_resource type="SpriteFrames" uid="uid://c5n02wvad4wpv" path="res://assets/art/NPCs/office-worker/office_worker_sprite_frames.tres" id="3_o3g1n"]
 
 [resource]
 script = ExtResource("2_nq0tq")
 start_visit_cue = &"start_visit_2"
 after_drink_cue = &"after_drink_2"
-sprite_frames = ExtResource("3_8v6o7")
+sprite_frames = ExtResource("3_o3g1n")
 dialogue_res = ExtResource("1_o3g1n")
 metadata/_custom_type_script = "uid://dp6jl6e4g2fqd"

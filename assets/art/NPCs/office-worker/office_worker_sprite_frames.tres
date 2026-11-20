@@ -1,0 +1,41 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://c5n02wvad4wpv"]
+
+[ext_resource type="Texture2D" uid="uid://dk576lq26shhh" path="res://assets/art/NPCs/office-worker/businessman_silhouette.png" id="1_5rsyf"]
+[ext_resource type="Texture2D" uid="uid://d24mrjqt0w058" path="res://assets/art/NPCs/office-worker/businessman_silhouette_2.png" id="2_p7jk4"]
+[ext_resource type="Texture2D" uid="uid://6iicmkmmklje" path="res://assets/art/NPCs/office-worker/businessman_mad.png" id="3_u6y66"]
+[ext_resource type="Texture2D" uid="uid://d0vxijq48ng1y" path="res://assets/art/NPCs/office-worker/businessman_happy.png" id="4_vppi8"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5rsyf")
+}],
+"loop": 1,
+"name": &"back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_p7jk4")
+}],
+"loop": 1,
+"name": &"back_drinking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_u6y66")
+}],
+"loop": 1,
+"name": &"front_angry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_vppi8")
+}],
+"loop": 1,
+"name": &"front_happy",
+"speed": 5.0
+}]
