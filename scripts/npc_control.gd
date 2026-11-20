@@ -6,7 +6,7 @@ extends Node2D
 @onready var character_sprite: AnimatedSprite2D = %character_sprite
 @onready var anim_player: AnimationPlayer = %AnimationPlayer
 
-@onready var dialogue_manager: DialogueManager = Engine.get_singleton("DialogueManager") 
+@onready var dialogue_manager: DialogueManager = Engine.get_singleton("DialogueManager")
 
 signal entered_bar
 signal finished_dialogue_start_visit
@@ -30,8 +30,8 @@ func new_visitor(d: NPCDialogueData) -> void:
 	play_anim.call_deferred(AnimType.EnterAnim)
 	#play_anim()
 
-enum AnimType { EnterAnim, DrinkAnim, ExitAnim }
-enum DialogueType { StartVisit, AfterDrink }
+enum AnimType {EnterAnim, DrinkAnim, ExitAnim}
+enum DialogueType {StartVisit, AfterDrink}
 
 func play_anim(t: AnimType) -> void:
 	match t:
@@ -46,6 +46,7 @@ func play_anim(t: AnimType) -> void:
 				_on_drink_anim_finished
 			)
 			anim_player.play("drink")
+			make_him_drink()
 		AnimType.ExitAnim:
 			anim_player.animation_finished.connect(
 				_on_exit_anim_finished
@@ -84,17 +85,13 @@ func _on_dialogue_start_visit_finished(_res: DialogueResource) -> void:
 	_balloon.queue_free()
 	_balloon = null
 	finished_dialogue_start_visit.emit()
-	# DEBUG CODE
-	#play_anim(AnimType.DrinkAnim)
-	# Remove after Bar Minigame implemented
 	dialogue_manager.dialogue_ended.disconnect(_on_dialogue_start_visit_finished)
 
 func _on_dialogue_after_drink_finished(_res: DialogueResource) -> void:
 	_balloon.queue_free()
 	_balloon = null
 	finished_dialogue_after_drink.emit()
-	#play_anim(AnimType.ExitAnim)
-	make_him_drink()
+	play_anim(AnimType.ExitAnim)
 	dialogue_manager.dialogue_ended.disconnect(_on_dialogue_after_drink_finished)
 	
 func make_him_drink() -> void:
@@ -102,12 +99,12 @@ func make_him_drink() -> void:
 	tween = create_tween()
 	tween.set_ease(Tween.EASE_OUT)
 	tween.set_trans(Tween.TRANS_CUBIC)
-	tween.tween_property(shaker,"visible",false,1.0)
-	tween.parallel().tween_property(shaker,"position", shaker.position + Vector2(70.0,170.0), 1.0)
+	tween.tween_property(shaker, "visible", false, 1.0)
+	tween.parallel().tween_property(shaker, "position", shaker.position + Vector2(70.0, 170.0), 1.0)
 	
-	tween.tween_property(shaker,"visible",false,0.9)
-	tween.parallel().tween_property(shaker,"position", shaker.position + Vector2(-50.0,-60.0), 0.9)
+	tween.tween_property(shaker, "visible", false, 0.9)
+	tween.parallel().tween_property(shaker, "position", shaker.position + Vector2(-50.0, -60.0), 0.9)
 
-	tween.tween_property(shaker,"visible",true,0.1)
-	tween.tween_property(shaker,"position", original_shaker_position, 0.1)
+	tween.tween_property(shaker, "visible", true, 0.1)
+	tween.tween_property(shaker, "position", original_shaker_position, 0.1)
 	await tween.finished

@@ -93,6 +93,7 @@ mouse_filter = 2
 
 [node name="NPC" parent="forground/NPC_control" unique_id=1967629777 node_paths=PackedStringArray("shaker") instance=ExtResource("1_5dekh")]
 unique_name_in_owner = true
+z_index = 2
 position = Vector2(0, 2)
 shaker = NodePath("../../../midground/serve/shaker")
 
@@ -110,6 +111,7 @@ mouse_filter = 2
 [node name="drinks" type="Node2D" parent="midground" unique_id=839620645]
 
 [node name="drink" parent="midground/drinks" unique_id=170791720 node_paths=PackedStringArray("pour_position", "npc_node") instance=ExtResource("7_pjll2")]
+z_index = 2
 position = Vector2(966, 271)
 scale = Vector2(0.75, 0.75)
 pour_position = NodePath("../../serve/pour_from")
@@ -133,7 +135,8 @@ position = Vector2(447.91998, 458)
 scale = Vector2(0.08, 0.08)
 texture = ExtResource("8_53o4m")
 
-[node name="Control" type="Control" parent="." unique_id=638102139]
+[node name="MainUIControl" type="Control" parent="." unique_id=638102139]
+unique_name_in_owner = true
 z_index = 12
 z_as_relative = false
 layout_mode = 1
@@ -142,7 +145,8 @@ mouse_filter = 2
 theme = ExtResource("3_x848m")
 script = ExtResource("2_bwlfd")
 
-[node name="Panel" type="Panel" parent="Control" unique_id=1915607326]
+[node name="RecipiesPanel" type="Panel" parent="MainUIControl" unique_id=1915607326]
+unique_name_in_owner = true
 visible = false
 layout_mode = 0
 offset_left = 332.0
@@ -152,7 +156,7 @@ offset_bottom = 617.0
 mouse_filter = 2
 theme = SubResource("Theme_agh12")
 
-[node name="MarginContainer" type="MarginContainer" parent="Control/Panel" unique_id=1414565382]
+[node name="MarginContainer" type="MarginContainer" parent="MainUIControl/RecipiesPanel" unique_id=1414565382]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -160,7 +164,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Control/Panel/MarginContainer" unique_id=2135258146]
+[node name="RichTextLabel" type="RichTextLabel" parent="MainUIControl/RecipiesPanel/MarginContainer" unique_id=2135258146]
 layout_mode = 2
 theme = SubResource("Theme_xil8a")
 bbcode_enabled = true
@@ -191,14 +195,28 @@ Serenity:(Joy-Grief-Rage)
 Own recipe: Use when the illusion is broken."
 scroll_following = true
 
-[node name="Button" type="Button" parent="Control" unique_id=313135586]
+[node name="VBoxContainer" type="VBoxContainer" parent="MainUIControl" unique_id=1418347021]
 layout_mode = 0
-offset_left = 87.0
-offset_top = 19.0
-offset_right = 239.0
-offset_bottom = 50.0
+offset_left = 64.0
+offset_top = 32.0
+offset_right = 167.0
+offset_bottom = 72.0
+
+[node name="ShowRecipiesButton" type="Button" parent="MainUIControl/VBoxContainer" unique_id=313135586]
+unique_name_in_owner = true
+layout_mode = 2
 toggle_mode = true
 text = "Recipe Book"
+
+[node name="NextCustomerButton" type="Button" parent="MainUIControl/VBoxContainer" unique_id=797878748]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Next Customer"
+
+[node name="ServeButton" type="Button" parent="MainUIControl/VBoxContainer" unique_id=736438329]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Serve"
 
 [node name="Audio" type="Node" parent="." unique_id=835692645]
 
