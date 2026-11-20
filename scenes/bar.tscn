@@ -19,9 +19,9 @@
 [ext_resource type="Resource" uid="uid://c1def0ggqkmyx" path="res://resources/npcs/military_officer_3.tres" id="8_iwn1s"]
 [ext_resource type="AudioStream" uid="uid://dhim1wbiplo6k" path="res://assets/music/Ethanol Dreams (Alter-Intro).wav" id="8_rrntp"]
 [ext_resource type="AudioStream" uid="uid://clpmvbe4dhu7k" path="res://assets/music/Ethanol Dreams (Alter).wav" id="9_5qaxt"]
-[ext_resource type="Script" uid="uid://dwp47kxgv7wu6" path="res://scripts/sound_effects.gd" id="10_onlfy"]
 [ext_resource type="Texture2D" uid="uid://cs5hlkwydqe2s" path="res://assets/art/counter_no_bg.png" id="9_iw8av"]
 [ext_resource type="Texture2D" uid="uid://5qy4pfvqi4ba" path="res://assets/art/background_no_desk.png" id="9_iwn1s"]
+[ext_resource type="Script" uid="uid://dwp47kxgv7wu6" path="res://scripts/sound_effects.gd" id="10_onlfy"]
 [ext_resource type="AudioStream" uid="uid://g6n8s67v8ijw" path="res://assets/music/bottle_sound.wav" id="11_ma3n4"]
 [ext_resource type="AudioStream" uid="uid://hs1hffxjt11v" path="res://assets/music/cocktail_shake.wav" id="12_a3xti"]
 [ext_resource type="AudioStream" uid="uid://c0x3pgoka0708" path="res://assets/music/ding.wav" id="13_a6y52"]
@@ -103,27 +103,33 @@ offset_left = 2.0
 offset_top = 1.0
 offset_right = 1154.0
 offset_bottom = 649.0
+mouse_filter = 2
 
 [node name="bartender" type="Sprite2D" parent="midground" unique_id=1672142623]
 
 [node name="drinks" type="Node2D" parent="midground" unique_id=839620645]
 
 [node name="drink" parent="midground/drinks" unique_id=170791720 node_paths=PackedStringArray("pour_position", "npc_node") instance=ExtResource("7_pjll2")]
-position = Vector2(830, 106)
+position = Vector2(966, 271)
 scale = Vector2(0.75, 0.75)
 pour_position = NodePath("../../serve/pour_from")
 npc_node = NodePath("../../../forground/NPC_control/NPC")
 
 [node name="serve" type="Control" parent="midground" unique_id=212159558]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [node name="pour_from" type="Node2D" parent="midground/serve" unique_id=1900383613]
-position = Vector2(496, 230)
+position = Vector2(553.92, 327)
 
 [node name="shaker" type="Sprite2D" parent="midground/serve" unique_id=1889087805]
-position = Vector2(390, 361)
+z_index = 1
+position = Vector2(447.91998, 458)
 scale = Vector2(0.08, 0.08)
 texture = ExtResource("8_53o4m")
 
@@ -131,11 +137,7 @@ texture = ExtResource("8_53o4m")
 z_index = 12
 z_as_relative = false
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
 mouse_filter = 2
 theme = ExtResource("3_x848m")
 script = ExtResource("2_bwlfd")
