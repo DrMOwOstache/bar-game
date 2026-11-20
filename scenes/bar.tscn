@@ -20,6 +20,8 @@
 [ext_resource type="AudioStream" uid="uid://dhim1wbiplo6k" path="res://assets/music/Ethanol Dreams (Alter-Intro).wav" id="8_rrntp"]
 [ext_resource type="AudioStream" uid="uid://clpmvbe4dhu7k" path="res://assets/music/Ethanol Dreams (Alter).wav" id="9_5qaxt"]
 [ext_resource type="Script" uid="uid://dwp47kxgv7wu6" path="res://scripts/sound_effects.gd" id="10_onlfy"]
+[ext_resource type="Texture2D" uid="uid://cs5hlkwydqe2s" path="res://assets/art/counter_no_bg.png" id="9_iw8av"]
+[ext_resource type="Texture2D" uid="uid://5qy4pfvqi4ba" path="res://assets/art/background_no_desk.png" id="9_iwn1s"]
 [ext_resource type="AudioStream" uid="uid://g6n8s67v8ijw" path="res://assets/music/bottle_sound.wav" id="11_ma3n4"]
 [ext_resource type="AudioStream" uid="uid://hs1hffxjt11v" path="res://assets/music/cocktail_shake.wav" id="12_a3xti"]
 [ext_resource type="AudioStream" uid="uid://c0x3pgoka0708" path="res://assets/music/ding.wav" id="13_a6y52"]
@@ -29,20 +31,6 @@
 [ext_resource type="AudioStream" uid="uid://b6jk553oq8gpi" path="res://assets/music/glass_clink.04.Audio 4.wav" id="17_53o4m"]
 [ext_resource type="AudioStream" uid="uid://bxoya6wfc5uo7" path="res://assets/music/ice.wav" id="18_sgjit"]
 [ext_resource type="AudioStream" uid="uid://c8de28axwllf5" path="res://assets/music/liquid_pour.wav" id="19_iw8av"]
-
-[sub_resource type="Gradient" id="Gradient_bwlfd"]
-offsets = PackedFloat32Array(0)
-colors = PackedColorArray(0.2909617, 0.08877704, 0.1388652, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_5ious"]
-gradient = SubResource("Gradient_bwlfd")
-
-[sub_resource type="Gradient" id="Gradient_x848m"]
-offsets = PackedFloat32Array(0)
-colors = PackedColorArray(0.5334419, 0.2969622, 0.29265246, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_cc4rh"]
-gradient = SubResource("Gradient_x848m")
 
 [sub_resource type="Theme" id="Theme_agh12"]
 
@@ -69,10 +57,9 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="drinks_shelves" type="Sprite2D" parent="background" unique_id=488381321]
-position = Vector2(575.75, 323.75)
-scale = Vector2(1152.5, 648.5)
-texture = SubResource("GradientTexture1D_5ious")
-region_enabled = true
+position = Vector2(576, 323.5)
+scale = Vector2(0.59999996, 0.59907407)
+texture = ExtResource("9_iwn1s")
 region_rect = Rect2(0, 0, 1, 1)
 
 [node name="forground" type="Control" parent="." unique_id=958049716]
@@ -88,9 +75,9 @@ grow_vertical = 0
 mouse_filter = 2
 
 [node name="bar_table" type="Sprite2D" parent="forground" unique_id=709490192]
-position = Vector2(576, 114.5)
-texture = SubResource("GradientTexture1D_cc4rh")
-region_enabled = true
+position = Vector2(576, -95.31249)
+scale = Vector2(0.6, 0.5994213)
+texture = ExtResource("9_iw8av")
 region_rect = Rect2(0, 0, 1152, 229)
 
 [node name="NPC_control" type="Control" parent="forground" unique_id=1101037892]
@@ -112,9 +99,10 @@ shaker = NodePath("../../../midground/serve/shaker")
 [node name="midground" type="Control" parent="." unique_id=445043826]
 z_index = 2
 anchors_preset = 0
-offset_right = 1152.0
-offset_bottom = 648.0
-mouse_filter = 2
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 1154.0
+offset_bottom = 649.0
 
 [node name="bartender" type="Sprite2D" parent="midground" unique_id=1672142623]
 
