@@ -8,7 +8,7 @@ var _next: int = 0
 @onready var ui: MainUI = %MainUIControl
 
 func _ready() -> void:
-	npc_control.exited_bar.connect(next_visitor)
+	# npc_control.exited_bar.connect(next_visitor)
 	npc_control.finished_dialogue_start_visit.connect(ui.serve_button.show)
 	ui.next_customer_button.pressed.connect(next_visitor)
 	ui.serve_button.pressed.connect(_on_serve_button_pressed)

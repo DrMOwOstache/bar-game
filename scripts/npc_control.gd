@@ -28,7 +28,6 @@ func new_visitor(d: NPCDialogueData) -> void:
 	_npc_data = d
 	character_sprite.sprite_frames = _npc_data.sprite_frames
 	play_anim.call_deferred(AnimType.EnterAnim)
-	#play_anim()
 
 enum AnimType {EnterAnim, DrinkAnim, ExitAnim}
 enum DialogueType {StartVisit, AfterDrink}
